@@ -1,14 +1,17 @@
+require 'pry'
+
 describe Artist do
   before(:each) do
     Artist.reset_all
   end
 
-  let(:artist){Artist.new}
-  let(:song){Song.new}
-  let(:genre){Genre.new}
+  let(:artist) {Artist.new}
+  let(:song) {Song.new}
+  let(:genre) {Genre.new}
     
   describe "with songs" do
     it "can have a song added" do
+
       artist.add_song(song)
       expect(artist.songs).to include(song)
     end
