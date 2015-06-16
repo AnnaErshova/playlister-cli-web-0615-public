@@ -4,8 +4,14 @@ class Song
 
   @@songs = Array.new
 
+  # instance methods
   def initialize
     @@songs << self
+  end
+
+  def genre=(genre) # doesn't test for this explicitly
+    @genre = genre
+    genre.songs << self
   end
 
   def to_s
